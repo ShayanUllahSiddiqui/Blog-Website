@@ -1,0 +1,286 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  background-color: #f0f0f0;
+}
+body {
+  color: #999999;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+.btn--block {
+  display: block;
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+@media (min-width: 40rem) {
+  .cards__item {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  .cards__item {
+    width: 33.3333%;
+  }
+}
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+  cursor: pointer;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+.card__image--flowers {
+  background-image: url(https://i2.wp.com/blog.homestars.com/wp-content/uploads/2020/11/3f03695a-e95b-4792-8082-35852d1adeb7_barrie_bathroom_projects.jpg?resize=585%2C390&ssl=1);
+}
+.card__image--river {
+  background-image: url(https://i2.wp.com/blog.homestars.com/wp-content/uploads/2020/12/a442e081-b3b1-4513-8fb7-6cb7713d76e7_shutterstock_555911128.jpg?resize=585%2C390&ssl=1);
+}
+.card__image--record {
+  background-image: url(https://i0.wp.com/blog.homestars.com/wp-content/uploads/2020/12/7a733216-1400-4236-b968-423c1a132167_mortgauge_what_is_a_refinance.jpg?resize=585%2C390&ssl=1);
+}
+.card__image--fence {
+  background-image: url(https://i2.wp.com/blog.homestars.com/wp-content/uploads/2020/12/d8cd8125-70d8-4a14-b66f-d01b717b523f_hire_plumber_barrie.jpg?resize=585%2C390&ssl=1);
+}
+.card__image--fence {
+  background-image: url(https://images.ctfassets.net/hrltx12pl8hq/1fR5Y7KaK9puRmCDaIof7j/09e2b2b9eaf42d450aba695056793607/vector1.jpg);
+}
+.card__image--fence {
+  background-image: url(https://i2.wp.com/blog.homestars.com/wp-content/uploads/2020/12/d8cd8125-70d8-4a14-b66f-d01b717b523f_hire_plumber_barrie.jpg?resize=585%2C390&ssl=1);
+}
+.card__image--plant {
+    background-image: url(https://i2.wp.com/blog.homestars.com/wp-content/uploads/2020/11/better_bathroom_lighting.jpg?resize=585%2C390&ssl=1);
+}
+.card__image--tree {
+    background-image: url(https://i0.wp.com/blog.homestars.com/wp-content/uploads/2020/12/66534545-4446-4a86-ae6f-691aa2ba9ae6_JPEG_20200810_111622_full_medium-1.jpg?resize=640%2C480&ssl=1);
+}
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__title:hover {
+    color: rgb(63, 192, 201);
+    transition: .3s;        
+}
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+.head-line {
+    width: 40%;
+}
+
+@media (max-width: 539px) {
+    .container h3 {
+        font-size: 16px;
+    }
+    .container h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 462px) {
+    .container h3 {
+        font-size: 14px;
+    }
+    .container h4 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container h3 {
+        font-size: 12.5px;
+        font-weight: 700;
+    }
+    .container h4 {
+        font-size: 12px;
+    }
+}
+
+
+clearfix {clear: both;}
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}
+
+.clr1 {background: #FFFFFF; color: #333743;}
+.clr2 {background: #F1F3F5; color: #8F94A3;}
+.clr3 {background: #3E4352; color: #BDC3CF;}
+.clr4 {background: #636A7D; color: #E3E7F2;}
+.clr5 {background: ; color: #F1F3F5;}
+.clr6 {background: ; color: #39B5A1;}
+.clr7 {background: ; color: #D45245;}
+
+a {color: #BDC3CF; text-decoration: none;}
+a:hover {color: #ffffff; text-decoration: underline;}
+a:visited{}
+
+/*##### Footer Structure #####*/
+.bo-wrap { width: auto;}
+.bo-footer {
+  clear:both;
+  width: auto;  
+  width: 960px;
+	margin: 0 auto;
+}
+
+.bo-footer-social {text-align: center; line-height: 1px;}
+
+.bo-footer-smap {
+	width: 300px;
+	float: left;
+	padding: 5px 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.bo-footer-uonline {
+	width: 300px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 10px;
+  text-align: center;
+}
+
+.bo-footer-power {
+	width: 300px;
+	padding: 5px 10px;
+	float: left;
+  text-align: right;
+  font-size: 14px;
+  color: #636A7D;
+  vertical-align: middle;
+}
+
+.bo-footer-copyright {text-align: center; color: #BDC3CF}
+
+/*##### Footer Responsive #####*/
+/* for 980px or less */
+@media screen and (max-width: 980px) {
+	
+	.bo-footer {
+		width: 95%;
+		padding: 1% 2%;
+	}
+	.bo-footer-smap {
+		width: 46%;
+		padding: 1% 2%;
+	}
+	.bo-footer-uonline {
+		width: 46%;
+		padding: 1% 2%;
+		float: right;
+    text-align: right;
+	}
+	
+	.bo-footer-power {
+		clear: both;
+		padding: 1% 2%;
+		width: auto;
+		float: none;
+    text-align: center;
+	}
+}
+/* for 700px or less */
+@media screen and (max-width: 600px) {
+
+	.bo-footer-smap {
+		width: auto; 
+		float: none;
+    text-align: center;
+	}
+	
+	.bo-footer-uonline {
+		width: auto;
+		float: none;
+    text-align: center;
+	}
+	
+	.bo-footer-power {
+		width: auto;
+		float: none;
+    text-align: center;
+	}
+
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+  
+}
